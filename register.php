@@ -1,53 +1,25 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html>
-<head>
-	<title>Flight Booking Website </title>
-</head>
-<body>
-
-<div class= "header">
-
-	<h1> Book a Travel</h1>
-	
-</div>
-
-<form> method= "post" action= "register.php">
-	<table>
-		<tr>
-			<td>Username:</td>
-			<td>input type="text" name="username" class="textInput"></td>
-
-		</tr>
-
-		<tr>
-			<td>Email:</td>
-			<td>input type="email" name="email" class="textInput"></td>
-
-		</tr>
-
-		<tr>
-			<td>Password:</td>
-			<td>input type="password" name="password" class="textInput"></td>
-
-		</tr>
-
-		<tr>
-			<td>Password again:</td>
-			<td>input type="password" name="password2" class="textInput"></td>
-
-		</tr>
-
-		<tr>
-			<td>Username:</td>
-			<td>input type="submit" name="register_btn" value="Register"></td>
-
-		</tr>
-	</table>
-</form>
-
-
-
-
-
-</body>
+	<head>
+		<title>Registration Page</title>
+	</head>
+	<body>
+		<?php
+			include("config.php");
+			$name = $_POST["name"];
+			$username = $_POST["user"];
+			$password = $_POST["pass"];
+			$question = $_POST["quest"];
+			$answer = $_POST["ans"];
+			$sql = "INSERT INTO user(name, username, password, question, answer) VALUES ('$name', '$username', '$password', '$question', '$answer')";
+			if ($conn->query($sql)===TRUE){
+				echo "Record Updated";
+			}
+			else{
+				echo "Record Not Updated";
+			}
+		?>
+		
+		<a href="login.html" class="button">Continue to Login</a>
+	</body>
 </html>
