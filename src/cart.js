@@ -1,5 +1,4 @@
-function DateCheck()
-{
+function DateCheck(){
   var StartDate= document.getElementById('TravelDate').value;
   var EndDate= document.getElementById('RetDate').value;
   var eDate = new Date(EndDate);

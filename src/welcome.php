@@ -49,7 +49,7 @@
 												<option value="3">Hotel and Car</option>
 										</select><br>
 
-										<input type="submit" name="search" value="Request Itinerary">
+										<input onclick="DateCheck()" type="submit" name="search" value="Request Itinerary">
 
 									</form>
 
