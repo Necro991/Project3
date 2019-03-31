@@ -34,10 +34,10 @@
 									echo '<p><a href="logout.php">Logout</a></p>';
 									echo '<form action="itinerary.php" method="post">
 										<label>Date Travel:</label>
-										<input type="date" name="travel"><br>
+										<input id="TravelDate" type="date" name="travel"><br>
 
 										<label>City</label>
-										<input type="text" name="city"><br>
+										<input id="RetDate" type="text" name="city"><br>
 
 										<label>Date Return:</label>
 										<input type="date" name="ret"><br>

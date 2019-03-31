@@ -19,10 +19,6 @@
     			$city = $_POST["city"];
           $package = $_POST["package"];
 
-
-          $sql = "INSERT INTO info (username, travel, ret, city, package) VALUES ('$name', $travel, $ret, '$city', $package)";
-
-
           $to = "flightco101@gmail.com"; // this is the company Email address, password is Test123;
           $from = $_SESSION["emailemail"]; // this is the sender's Email address
 
@@ -38,14 +34,20 @@
               $packValue = "Hotel and Car";
           }
 
-
           $headers = "From: " . $from . "\r\n";
 
           $message = $name . " chooses the follow package:" . "\n\n" . $packValue . " at " . $city . "\n\n From " . $travel .  " to " . $ret ;
 
+
+
+
+          $sql = "INSERT INTO info (username, travel, ret, city, package) VALUES ('$name', '$travel', '$ret', '$city', $package)";
+
           if ($conn->query($sql)===TRUE){
             mail($to,$subject,$message, $headers);
             echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+          
+
     			}
     			else{
     				echo "Submission Failed.";

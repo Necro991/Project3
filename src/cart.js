@@ -1,3 +1,15 @@
+function DateCheck()
+{
+  var StartDate= document.getElementById('TravelDate').value;
+  var EndDate= document.getElementById('RetDate').value;
+  var eDate = new Date(EndDate);
+  var sDate = new Date(StartDate);
+  if(StartDate!= '' && StartDate!= '' && sDate> eDate)
+    {
+    alert("Please ensure that the Return Date is greater than or equal to the Travel Date.");
+    return false;
+    }
+}
 
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
