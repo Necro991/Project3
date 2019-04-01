@@ -11,10 +11,10 @@
 
         include("config.php");
 
-          echo "Hello " . $_SESSION["namename"] . ",<br>";
+          echo "Hi " . $_SESSION["namename"] . ",<br>";
 
           $name = $_SESSION["namename"];
-				$travel = $_POST["travel"];
+    			$travel = $_POST["travel"];
     			$ret = $_POST["ret"];
     			$city = $_POST["city"];
           $package = $_POST["package"];
@@ -45,7 +45,7 @@
 
           if ($conn->query($sql)===TRUE){
             mail($to,$subject,$message, $headers);
-            echo "Email Sent. Thank you" . $first_name . ", we will contact you shortly.";
+            echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
           
 
     			}

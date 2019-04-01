@@ -1,14 +1,11 @@
 <!Doctype html>
 <html>
 	<head>
-		<title>Travel Agency</title>
+		<title>Login Page</title>
 		<link rel="stylesheet" href="style.css" />
 		<script src="cart.js" async></script>
 	</head>
 	<body>
-		<script>
-			var flight = 250;
-		</script>
 
 		<?php
 			if (isset($_POST["login"])){
@@ -47,12 +44,12 @@
 
 										<label>Package</label>
 										<select name="package">
-												<option onclick="flight=250; updateCartTotal();" value="1">Flight Only</option>
-												<option onclick="flight=500; updateCartTotal();" value="2">Rental Car & Flight</option>
-												<option onclick="flight=1000; updateCartTotal();" value="3">Hotel, Rental Car, & Flight</option>
+												<option value="1">Hotel and Flight</option>
+												<option value="2">Car and Flight</option>
+												<option value="3">Hotel and Car</option>
 										</select><br>
 
-										<input onclick="DateCheck()" type="submit" name="search" value="Request Itinerary">
+										<input type="submit" name="search" value="Request Itinerary">
 
 									</form>
 
@@ -92,7 +89,7 @@
 							                <span class="cart-total-price" name="totalPrice">$250</span>
 							            </div>
 
-										<button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>		
+												 <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
 
 							    </section>';
 
@@ -102,20 +99,13 @@
 								echo "Error";
 							}
 
-							$sql2 = "SELECT email FROM agency WHERE username = '$username' AND password = '$password'";
-							$result = $conn->query($sql2);
-							if ($result->num_rows > 0){
-								while($row = $result->fetch_assoc()){
-									//Calling the session here allows you to make what are effecively global variables that can be called in any other php files after using this.
-									$_SESSION["emailemail"] = $row["email"];
-								}
-							}
+
 				}
 			}
 
 		?>
 
-		 
+
 
 	</body>
 </html>
