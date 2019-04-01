@@ -5,26 +5,6 @@
     <title>Credit Card</title>
   </head>
   <body>
-	<?php
-		session_start();
-
-		include("config.php");
-		$username = $_POST["user"];
-		$password = $_POST["pass"];
-
-		$sql = "SELECT name FROM agency WHERE username = '$username' AND password = '$password'";
-
-		$result = $conn->query($sql);
-
-		if ($result->num_rows > 0){
-			while($row = $result->fetch_assoc()){
-				//Calling the session here allows you to make what are effecively global variables that can be called in any other php files after using this.
-				$_SESSION["namename"] = $row["name"];
-				echo "Welcome " . $row["name"]. ",<br>";
-				echo '<p><a href="logout.php">Logout</a></p>';
-			}
-		}
-	?>
 	<script>
 		function validateCard(){
 			var owner = document.getElementById("owner").value;
@@ -36,7 +16,7 @@
 			
 			if(owner != "" && cvv != "" && cardNum != "" && address != "" && baddress != "" && phone != ""){
 				alert("Payment Accepted, Redirecting...");
-				window.location = "welcome.php";
+				window.location = "login.html";
 			}
 			else {
 				alert("Payment Not Accepted");
