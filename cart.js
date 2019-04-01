@@ -47,7 +47,7 @@ function purchaseClicked() {
         cartItems.removeChild(cartItems.firstChild);
     }
     updateCartTotal();
-	window.location = "credit.html";
+	window.location = "credit.php";
 }
 
 function removeCartItem(event) {
