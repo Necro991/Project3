@@ -6,6 +6,9 @@
 		<script src="cart.js" async></script>
 	</head>
 	<body>
+		<script>
+			var flight = 250;
+		</script>
 
 		<?php
 			if (isset($_POST["login"])){
