@@ -6,9 +6,9 @@
 	<body>
 		<?php
 			$servername="localhost";
-			$username="agould5";
-			$password="agould5";
-			$dbname="agould5";
+			$username="";
+			$password="";
+			$dbname="";
 
 			//Create Connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
