@@ -4,14 +4,53 @@
 		<title>Registration Page</title>
 	</head>
 	<body>
-		<img src="travel_logo.jpg" alt="logo" width="180" height="150">
-		<h1>Welcome to Travel Co 101</h1>
+		<img src="travel_logo.jpg" alt="logo" width="1500" height="380">
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
+<ul>
+  <li><a class="active" href="about.html">About</a></li>
+  <li><a href="popular_destination.html">Popular Destination</a></li>
+  <li><a href="photos.html">Photos</a></li>
+  <li><a href="account.html">Account</a></li>
+</ul>
 		<form action="register.php" method="post">
 
 			Name:<input type="text" name="name"><br>
 			Username:<input type="text" name="user"><br>
 			Password:<input type="password" name="pass" pattern=".{3,}" title="Must contain at least 3 or more characters"><br>
-			Email:<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Must use a valid email"><br>
+			Email:<input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Must use a valid email"><br>
 
 			<input type="submit" name="register">
 
