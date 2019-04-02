@@ -8,6 +8,11 @@
 	<body>
 
 		<?php
+
+		session_start();
+
+		include("config.php");
+
 			if (isset($_POST["login"])){
 				if ( $_POST["user"] == "" || $_POST["pass"] == "" ){
 					$message = "Invalid inputs";
@@ -16,9 +21,7 @@
 								<a href="register.html" class="button">New Account?</a>';
 				}else{
 							//Start the session, call this in every page you want to use session variables
-							session_start();
 
-							include("config.php");
 							$username = $_POST["user"];
 							$password = $_POST["pass"];
 

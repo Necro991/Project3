@@ -6,10 +6,16 @@
   </head>
   <body>
     <?php
+    session_start();
+    include("config.php");
 
-        session_start();
+    if (isset($_POST["search"])){
 
-        include("config.php");
+      if ( $_POST["travel"] == "" || $_POST["travel"] == "" || $_POST["city"] == ""){
+        $message = "Invalid inputs";
+        echo "<script type='text/javascript'>alert('$message');</script>";
+        echo '<br><a href="login.html" class="button">Login Again</a><br>';
+      }else{
 
           echo "Hi " . $_SESSION["namename"] . ",<br>";
 
@@ -46,13 +52,15 @@
           if ($conn->query($sql)===TRUE){
             mail($to,$subject,$message, $headers);
             echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-          
+
 
     			}
     			else{
     				echo "Submission Failed.";
             echo '<p><a href="login.html">Log in again to resubmit.</a></p>';
     			}
+      }
+    }
     ?>
 
 		<p><a href="logout.php">Logout</a></p>
