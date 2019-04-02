@@ -3,9 +3,16 @@
 	<head>
 		<title>Registration Page</title>
 	</head>
+	<img src="travel_logo.jpg" alt="logo" align="middle" width="25%" height="25%">
 	<body>
-		<img src="travel_logo.jpg" alt="logo" width="1500" height="380">
+		
 <style>
+form {
+  text-align: center;
+}
+body {
+	background-color:#FBFAF8;
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -45,6 +52,7 @@ li a:hover:not(.active) {
   <li><a href="photos.html">Photos</a></li>
   <li><a href="account.html">Account</a></li>
 </ul>
+	<h1 align="center">Book a Travel Registration</h1>
 		<form action="register.php" method="post">
 
 			Name:<input type="text" name="name"><br>
@@ -54,7 +62,8 @@ li a:hover:not(.active) {
 
 			<input type="submit" name="register">
 
+		
+		<a href="login.html" value="Register" class="button"><input type="submit" value="Login"></a>
 		</form>
-		<a href="login.html" class="button"><input type="submit" value="Login"></a>
 	</body>
 </html>

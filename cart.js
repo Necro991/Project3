@@ -1,4 +1,4 @@
-var flight = 250;
+var flight = 249.99;
 
 function DateCheck(){
   var StartDate= document.getElementById('TravelDate').value;

@@ -2,9 +2,32 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Credit Card</title>
+    <title>Payment Page</title>
   </head>
   <body>
+	<style>
+form {
+	display:table;
+	text-align: center;
+}
+body {
+	background-color:#FBFAF8;
+}
+.payment {
+  width: 120px;
+  clear: both;
+  text-align:center;
+}
+
+.payment input {
+  width: 100%;
+  clear: both;
+  text-align:center;
+}
+label {
+	float:left;
+}
+</style>
 	<script>
 		function validateCard(){
 			var owner = document.getElementById("owner").value;
@@ -25,10 +48,11 @@
 	</script>
 	<div class="creditCardForm">
     <div class="heading">
-        <h1>Confirm Purchase</h1>
+        <h1 align="center">Confirm Purchase</h1>
+		<p align="center">Please fill in all the fields below.</p>
     </div>
-    <div class="payment">
-        <form>
+    <div align="center" class="payment">
+        <form >
             <div class="form-group owner">
                 <label for="owner">Owner</label>
                 <input type="text" class="form-control" id="owner">

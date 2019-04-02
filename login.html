@@ -4,8 +4,14 @@
 		<title>Login Page</title>
 	</head>
 	<body>
-		<img src="travel_logo.jpg" alt="logo" width="1600" height="200">
+	<img src="travel_logo.jpg" alt="logo" align="middle" width="25%" height="25%">
 <style>
+form {
+  text-align: center;
+}
+body {
+	background-color:#FBFAF8;
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -41,7 +47,7 @@ li a:hover:not(.active) {
 </style>
 <ul>
   <li><a class="active" href="about.html">About</a></li>
-  <li><a href="popular_destination.html">Popular Destination</a></li>
+  <li><a href="popular_destination.html">Popular Destinations</a></li>
   <li><a href="photos.html">Photos</a></li>
   <li><a href="account.html">Account</a></li>
 </ul>
@@ -50,15 +56,15 @@ li a:hover:not(.active) {
 
 
 
-		<h1>Welcome to Travel Co 101</h1>
+		<h1 align="center">Book a Travel Login</h1>
 
 		<form align="center" action="welcome.php" method="post">
 
 			Username:<input type="text" name="user"><br>
 			Password:<input type="password" name="pass"><br>
 
-			<input align="center" type="submit" name="login">
+			<input type="submit" name="login" value="Login">
+			<input type="button" onclick="location.href='register.html';" value="Register" />
 		</form>
-		<a align= "center" href="register.html" class="button" ><input type="submit"  value="Sign Up"></a>
 	</body>
 </html>

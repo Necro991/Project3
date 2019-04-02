@@ -6,6 +6,46 @@
 		<script src="cart.js" async></script>
 	</head>
 	<body>
+	<style>
+form {
+  text-align: center;
+}
+body {
+	background-color:#FBFAF8;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+</style>
 
 		<?php
 
@@ -47,9 +87,9 @@
 
 										<label>Package</label>
 										<select name="package">
-												<option value="1">Hotel and Flight</option>
-												<option value="2">Car and Flight</option>
-												<option value="3">Hotel and Car</option>
+												<option onclick="flight = 250; updateCartTotal();" value="1">Hotel and Flight</option>
+												<option onclick="flight = 500; updateCartTotal();" value="2">Car and Flight</option>
+												<option onclick="flight = 1000; updateCartTotal();" value="3">Hotel and Car</option>
 										</select><br>
 
 										<input type="submit" name="search" value="Request Itinerary">

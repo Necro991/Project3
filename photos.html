@@ -1,11 +1,17 @@
 <!Doctype html>
 <html>
 	<head>
-		<title>Login Page</title>
+		<title>Photos</title>
 	</head>
 	<body>
-		<img src="travel_logo.jpg" alt="logo" width="1600" height="200">
+		<img src="travel_logo.jpg" alt="logo" align="middle" width="25%" height="25%">
 <style>
+* {
+  box-sizing: border-box;
+}
+body {
+	background-color:#FBFAF8;
+}
 ul {
   list-style-type: none;
   margin: 0;
@@ -14,16 +20,16 @@ ul {
   background-color: #333;
 }
 
-li {
+ul li {
   float: left;
   border-right:1px solid #bbb;
 }
 
-li:last-child {
+ul li:last-child {
   border-right: none;
 }
 
-li a {
+ul li a {
   display: block;
   color: white;
   text-align: center;
@@ -31,17 +37,29 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
+ul li a:hover:not(.active) {
   background-color: #111;
 }
 
 .active {
   background-color: #4CAF50;
 }
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: inline-block;
+} 
 </style>
 <ul>
   <li><a class="active" href="about.html">About</a></li>
-  <li><a href="popular_destination.html">Popular Destination</a></li>
+  <li><a href="popular_destination.html">Popular Destinations</a></li>
   <li><a href="photos.html">Photos</a></li>
   <li><a href="account.html">Account</a></li>
 </ul>
@@ -51,12 +69,12 @@ li a:hover:not(.active) {
 
 <div class="row">
   <div class="column">
-    <img src="Eiffel.jpg" alt="tower" style="width:40%">
+    <img src="Eiffel.jpg" alt="tower" style="width:100%">
   </div>
   <div class="column">
-    <img src="London.jpg" alt="bridge" style="width:40%">
+    <img src="London.jpg" alt="bridge" style="width:100%">
   </div>
   <div class="column">
-    <img src="Statue.jpg" alt="statue" style="width:40%">
+    <img src="Statue.jpg" alt="statue" style="width:100%">
   </div>
 </div>
